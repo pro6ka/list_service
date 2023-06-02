@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MainController!{% endblock %}
+
+{% block body %}
+
+    <h3>Поиск</h3>
+    <form action="{{ path('search') }}" method="GET">
+        <input type="text" placeholder="Поиск" name="q">
+        <button type="submit" class="button">Найте</button>
+    </form>
+    <h3>Загрузка файла</h3>
+    <form method="POST" action="{{ path('download') }}" enctype="multipart/form-data">
+        <input class="input" type="file" name="file">
+        <button type="submit" class="button">Загрузить</button>
+    </form>
+    <div class="items">
+        <ul>
+        {% for item in items %}
+            <li>
+                <a href="{{ path('update', {id: item.id}) }}">{{ item.value }}</a>
+                <a class="remove" href="{{ path('remove', { id: item.id }) }}">удалить</a>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+    <div class="add">
+        <h3>Добавить элемент</h3>
+        {{ form(add_form) }}
+    </div>
+</div>
+{% endblock %}

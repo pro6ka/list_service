@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="shiporder.xsd">
+    <item>John Smith</item>
+    <item>Ola Nordmann</item>
+    <item>Norway</item>
+    <item>Empire Burlesque</item>
+    <item>Special Edition</item>
+    <item>10.90</item>
+    <item>Hide your heart</item>
+</items>
